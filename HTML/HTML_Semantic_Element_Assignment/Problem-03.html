@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Healthcare Clinic Information & Appointment Portal</title>
+</head>
+<body>
+    <header>
+        <h1>Metro Health & Wellness Clinic</h1>
+        <p>Compassionate Care, Advanced Medicine, Trusted Professionals</p>
+        <nav>
+            <ul>
+                <li><a href="#departments">Departments</a></li>
+                <li><a href="#resources">Patient Resources</a></li>
+                <li><a href="#schedules">Schedules</a></li>
+                <li><a href="#appointment">Book Appointment</a></li>
+                <li><a href="#contact">Contact & Location</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Welcome to Metro Health Clinic</h2>
+            <p>Our multi-specialty facility is dedicated to providing comprehensive healthcare services ranging from routine check-ups to specialized pediatric and cardiology treatments.</p>
+            <figure>
+                <a href="#facility-tour"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkv4sFJC4BZxL0W07iR0JNlGA2nTRxGypx4E7RFQ7HaA&s=10" alt="Modern waiting lounge and reception area at Metro Health Clinic"></a>
+                <figcaption>Main Reception and Patient Lounge</figcaption>
+            </figure>
+            <blockquote>
+                <p>"The level of professional attention and care I received at Metro Health was truly exceptional."</p>
+                <footer>— <cite>Robert Smith, Patient</cite></footer>
+            </blockquote>
+        </section>
+
+        <section id="departments">
+            <h2>Our Specialized Services</h2>
+            <p>We operate <strong>state-of-the-art</strong> clinics equipped with advanced diagnostic tools and led by experienced specialists.</p>
+            <ul>
+                <li>Comprehensive Cardiology and Heart Care Unit</li>
+                <li>Pediatric and Neonatal Care Center</li>
+                <li>Orthopedic Surgery and Rehabilitation</li>
+                <li>Advanced Diagnostic Imaging & Pathology Laboratory</li>
+            </ul>
+        </section>
+
+        <section id="schedules">
+            <h2>Doctor Availability & Schedules</h2>
+            <p>Please review our weekly specialist schedule before requesting an appointment slot.</p>
+            
+            <table border="1">
+                <caption>Specialist Timetable</caption>
+                <thead>
+                    <tr>
+                        <th>Specialist</th>
+                        <th>Department</th>
+                        <th>Days</th>
+                        <th>Time</th>
+                        <th>Consultation Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dr. Sarah Jenkins, M.D.</td>
+                        <td>Cardiology</td>
+                        <td>Mon, Wed, Fri</td>
+                        <td>09:00 AM - 02:00 PM</td>
+                        <td>In-Person & Virtual</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Michael Chang, Ph.D.</td>
+                        <td>Pediatrics</td>
+                        <td>Tue, Thu, Sat</td>
+                        <td>10:00 AM - 04:00 PM</td>
+                        <td>In-Person Only</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Emily Roberts, M.S.</td>
+                        <td>Orthopedics</td>
+                        <td>Mon, Tue, Thu</td>
+                        <td>01:00 PM - 06:00 PM</td>
+                        <td>In-Person & Follow-up</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. David Miller, D.O.</td>
+                        <td>General Medicine</td>
+                        <td>Monday to Saturday</td>
+                        <td>08:00 AM - 01:00 PM</td>
+                        <td>Walk-In & Appointment</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Lisa Wong, M.D.</td>
+                        <td>Dermatology</td>
+                        <td>Wed, Fri</td>
+                        <td>02:00 PM - 07:00 PM</td>
+                        <td>Virtual Consultation</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Robert Taylor, M.S.</td>
+                        <td>Ophthalmology</td>
+                        <td>Tue, Thu</td>
+                        <td>09:00 AM - 01:00 PM</td>
+                        <td>In-Person Only</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="terminology">
+            <h2>Medical Terminology Guide</h2>
+            <dl>
+                <dt>Consultation</dt>
+                <dd>An initial diagnostic meeting between a patient and a physician to discuss symptoms and treatment plans.</dd>
+                <dt>Follow-up</dt>
+                <dd>A scheduled subsequent visit to review recovery progress and evaluate medication efficacy.</dd>
+                <dt>OPD (Outpatient Department)</dt>
+                <dd>Hospital division designed for patients receiving medical care without formal overnight admission.</dd>
+                <dt>Appointment</dt>
+                <dd>A reserved time slot allocated for a specific patient to consult with a medical specialist.</dd>
+            </dl>
+        </section>
+
+        <article>
+            <h2>Patient Advisory: Seasonal Health Precautions</h2>
+            <p>With seasonal changes approaching, our clinical experts recommend maintaining adequate hydration, practicing routine hygiene, and keeping emergency contact numbers handy. Chemical formula note for hydration tracking: $H_2O$ intake is vital. Water purity level index $\text{ppm} \le 50$ is recommended for drinking fountains.</p>
+        </article>
+
+        <aside>
+            <h3>Patient Instructions & Notes</h3>
+            <p>Please arrive 15 minutes prior to your scheduled appointment time. Bring your previous medical records, photo ID, and insurance card for swift registration.</p>
+            <figure>
+                <a href="#instructions"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmiCIgm6suFsgQKum-bRUgDwnaffkta-BhsZ4ACOC9qA&s=10" alt="Patient reading advisory guidelines in the consultation waiting area"></a>
+                <figcaption>Patient Registration Desk</figcaption>
+            </figure>
+        </aside>
+
+        <section id="appointment">
+            <h2>Request an Appointment</h2>
+            <form action="/submit-appointment" method="POST">
+                <fieldset>
+                    <legend>Appointment Booking Form</legend>
+                    
+                    <label for="pname">Patient Name:</label>
+                    <input type="text" id="pname" name="patient_name" required autocomplete="name"><br><br>
+
+                    <label for="pemail">Email Address:</label>
+                    <input type="email" id="pemail" name="email" required autocomplete="email"><br><br>
+
+                    <label for="pmobile">Mobile Number:</label>
+                    <input type="tel" id="pmobile" name="mobile" required pattern="[0-9]{10}"><br><br>
+
+                    <label for="adate">Preferred Date:</label>
+                    <input type="date" id="adate" name="appointment_date" required><br><br>
+
+                    <label for="atime">Preferred Time:</label>
+                    <input type="time" id="atime" name="appointment_time" required><br><br>
+
+                    <label for="dept">Department:</label>
+                    <select id="dept" name="department" required>
+                        <option value="">--Select Department--</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="orthopedics">Orthopedics</option>
+                        <option value="general">General Medicine</option>
+                        <option value="dermatology">Dermatology</option>
+                    </select><br><br>
+
+                    <label for="doctor">Preferred Doctor:</label>
+                    <select id="doctor" name="doctor">
+                        <option value="">--Any Available Specialist--</option>
+                        <option value="jenkins">Dr. Sarah Jenkins</option>
+                        <option value="chang">Dr. Michael Chang</option>
+                        <option value="roberts">Dr. Emily Roberts</option>
+                        <option value="miller">Dr. David Miller</option>
+                    </select><br><br>
+
+                    <label>Consultation Type:</label>
+                    <input type="radio" id="ctype-in" name="consultation_type" value="in-person" checked>
+                    <label for="ctype-in">In-Person</label>
+                    <input type="radio" id="ctype-vir" name="consultation_type" value="virtual">
+                    <label for="ctype-vir">Virtual</label><br><br>
+
+                    <label for="age">Patient Age:</label>
+                    <input type="number" id="age" name="age" min="0" max="120" required><br><br>
+
+                    <label for="symptoms">Reason / Symptoms Description:</label><br>
+                    <textarea id="symptoms" name="symptoms" rows="4" cols="40" required placeholder="Describe your symptoms or reason for visit..."></textarea><br><br>
+
+                    <input type="checkbox" id="terms-agree" name="terms" required>
+                    <label for="terms-agree">I understand that appointment requests are subject to confirmation by clinic staff.</label><br><br>
+
+                    <button type="submit">Request Appointment</button>
+                    <button type="reset">Reset Form</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 Metro Health & Wellness Clinic. All rights reserved.</p>
+        <p>450 Healthcare Boulevard, Metropolis | Emergency Helpline: 911 | Clinic Desk: info@metrohealth.org</p>
+        <p><small>Disclaimer: This portal is for informational and scheduling purposes only and does not replace professional medical diagnosis.</small></p>
+    </footer>
+</body>
+</html>

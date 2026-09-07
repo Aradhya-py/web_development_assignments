@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Checkout</title>
+</head>
+<body>
+
+<h1>Checkout & Delivery</h1>
+<hr>
+<p>Review your selected products and provide your delivery and payment details to place your order.</p>
+
+<img src="store.png" alt="Online Store" width="400">
+
+<h2>Selected Products</h2>
+
+<table border="1">
+    <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <td>iphone 17</td>
+        <td>1</td>
+        <td>₹85,000</td>
+        <td>₹85,000</td>
+    </tr>
+    <tr>
+        <td>Logitech Mouse</td>
+        <td>1</td>
+        <td>₹2,000</td>
+        <td>₹2,000</td>
+    </tr>
+    <tr>
+        <td>cleaner</td>
+        <td>1</td>
+        <td>₹1,500</td>
+        <td>₹1,500</td>
+    </tr>
+</table>
+
+<br>
+
+<form action="#" method="post">
+
+    <h2>Customer Information</h2>
+
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="customer_name" placeholder="Enter your full name" minlength="3" maxlength="50" autocomplete="name" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email" required>
+    <br><br>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10}" autocomplete="tel" required>
+    <br><br>
+
+    <h2>Delivery Address</h2>
+
+    <label for="street">House/Street:</label>
+    <input type="text" id="street" name="street" placeholder="House number and street" maxlength="150" autocomplete="street-address" required>
+    <br><br>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" placeholder="Enter city" maxlength="50" required>
+    <br><br>
+
+    <label for="state">State:</label>
+    <select id="state" name="state" required>
+        <option value="">Select State</option>
+        <option value="uttar-pradesh">Uttar Pradesh</option>
+        <option value="delhi">Delhi</option>
+        <option value="maharashtra">Maharashtra</option>
+        <option value="karnataka">Karnataka</option>
+        <option value="rajasthan">Rajasthan</option>
+        <option value="gujarat">Gujarat</option>
+    </select>
+    <br><br>
+
+    <label for="postal-code">Postal Code:</label>
+    <input type="text" id="postal-code" name="postal_code" placeholder="6-digit postal code" pattern="[0-9]{6}" maxlength="6" required>
+    <br><br>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+        <option value="">Select Country</option>
+        <option value="india">India</option>
+        <option value="usa">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="canada">Canada</option>
+        <option value="australia">Australia</option>
+    </select>
+    <br><br>
+
+    <h2>Delivery Method</h2>
+
+    <input type="radio" id="standard" name="delivery_method" value="standard" required>
+    <label for="standard">Standard Delivery</label>
+    <br>
+
+    <input type="radio" id="express" name="delivery_method" value="express">
+    <label for="express">Express Delivery</label>
+    <br>
+
+    <input type="radio" id="same-day" name="delivery_method" value="same_day">
+    <label for="same-day">Same Day Delivery</label>
+    <br><br>
+
+    <h2>Payment Method</h2>
+
+    <input type="radio" id="card" name="payment_method" value="card" required>
+    <label for="card">Card</label>
+    <br>
+
+    <input type="radio" id="cod" name="payment_method" value="cash_on_delivery">
+    <label for="cod">Cash on Delivery</label>
+    <br>
+
+    <input type="radio" id="upi" name="payment_method" value="upi">
+    <label for="upi">UPI/Online Payment</label>
+    <br><br>
+
+    <label for="card-holder">Card Holder Name:</label>
+    <input type="text" id="card-holder" name="card_holder" placeholder="Name on card" maxlength="50">
+    <br><br>
+
+    <label for="card-number">Card Number:</label>
+    <input type="text" id="card-number" name="card_number" placeholder="16-digit card number" pattern="[0-9]{16}" maxlength="16">
+    <br><br>
+
+    <label for="expiry">Expiry Date:</label>
+    <input type="month" id="expiry" name="card_expiry">
+    <br><br>
+
+    <label for="security-code">Security Code:</label>
+    <input type="password" id="security-code" name="security_code" placeholder="3-digit code" pattern="[0-9]{3}" maxlength="3">
+    <br><br>
+
+    <h2>Additional Information</h2>
+
+    <input type="checkbox" id="billing" name="billing_address" value="same">
+    <label for="billing">Billing address is same as delivery address</label>
+    <br><br>
+
+    <label for="instructions">Delivery Instructions:</label>
+    <br>
+    <textarea id="instructions" name="delivery_instructions" rows="5" cols="50" maxlength="300" placeholder="Enter any special delivery instructions"></textarea>
+    <br><br>
+
+    <label for="coupon">Coupon/Promo Code:</label>
+    <input type="text" id="coupon" name="coupon_code" placeholder="Enter promo code" maxlength="20" pattern="[A-Za-z0-9]{1,20}">
+    <br><br>
+
+    <input type="checkbox" id="terms" name="terms" value="accepted" required>
+    <label for="terms">I agree to the Terms & Conditions.</label>
+    <br><br>
+
+    <input type="checkbox" id="confirmation" name="order_confirmation" value="confirmed" required>
+    <label for="confirmation">I confirm that my order details are correct.</label>
+    <br><br>
+
+    <input type="submit" value="Place Order">
+    <input type="reset" value="Reset">
+
+</form>
+
+<p><a href="https://www.amazon.in">Continue Shopping</a></p>
+
+</body>
+</html>
+

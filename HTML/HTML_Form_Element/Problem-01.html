@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>GLA University Admission Application</title>
+</head>
+<body>
+
+    <h1>GLA University Admission Application Form</h1>
+<hr>
+    <p>
+        Welcome to GLA University. This admission application form is designed
+        for students who wish to apply for undergraduate and postgraduate
+        programs. Please enter your details carefully and submit the form.
+    </p>
+
+    <img src="gla-campus.jpg"
+     alt="GLA University campus building"
+     width="450">
+
+    <p>
+        Visit the
+        <a href="https://www.gla.ac.in/" target="_blank">
+            GLA University Official Website
+        </a>
+        for more information about courses and admissions.
+    </p>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+<hr>
+        <h2>Personal Information</h2>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="full_name"
+               placeholder="Enter your full name"
+               minlength="3" maxlength="50"
+               autocomplete="name" required>
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="date_of_birth"
+               min="1990-01-01" max="2010-12-31" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+               placeholder="example@email.com"
+               autocomplete="email" required>
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile_number"
+               placeholder="10 digit mobile number"
+               pattern="[0-9]{10}" maxlength="10"
+               autocomplete="tel" required>
+        <br><br>
+
+        <label for="pin">Application PIN:</label>
+        <input type="password" id="pin" name="application_pin"
+               placeholder="Enter 6 digit PIN"
+               minlength="6" maxlength="6"
+               pattern="[0-9]{6}" required>
+        <br><br>
+
+        <p>Gender:</p>
+
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+<hr>
+        <h2>Admission Details</h2>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="">Select Category</option>
+            <option value="general">General</option>
+            <option value="obc">OBC</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+            <option value="ews">EWS</option>
+        </select>
+        <br><br>
+
+        <label for="course">Program:</label>
+        <select id="course" name="program" required>
+            <option value="">Select Program</option>
+            <option value="btech_cse">B.Tech CSE</option>
+            <option value="btech_cse_aiml">B.Tech CSE AI & ML</option>
+            <option value="btech_cse_ds">B.Tech CSE Data Science</option>
+            <option value="btech_ece">B.Tech Electronics & Communication</option>
+            <option value="btech_me">B.Tech Mechanical Engineering</option>
+            <option value="btech_ce">B.Tech Civil Engineering</option>
+            <option value="bca">BCA</option>
+            <option value="mca">MCA</option>
+        </select>
+        <br><br>
+
+        <p>Preferred Facilities:</p>
+
+        <input type="checkbox" id="hostel" name="facilities" value="hostel">
+        <label for="hostel">Hostel</label>
+
+        <input type="checkbox" id="transport" name="facilities" value="transport">
+        <label for="transport">Transport</label>
+
+        <input type="checkbox" id="library" name="facilities" value="library">
+        <label for="library">Library</label>
+
+        <input type="checkbox" id="sports" name="facilities" value="sports">
+        <label for="sports">Sports Facilities</label>
+<hr>
+        <h2>Previous Qualification</h2>
+
+        <label for="qualification">Previous Qualification:</label>
+        <select id="qualification" name="qualification" required>
+            <option value="">Select Qualification</option>
+            <option value="12th">12th / Senior Secondary</option>
+            <option value="diploma">Diploma</option>
+            <option value="graduation">Graduation</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="percentage">Percentage / CGPA:</label>
+        <input type="number" id="percentage" name="percentage"
+               min="0" max="100" step="0.01"
+               placeholder="Enter percentage" required>
+        <br><br>
+
+        <label for="passing_year">Passing Year:</label>
+        <input type="number" id="passing_year" name="passing_year"
+               min="2000" max="2026" step="1" required>
+        <br><br>
+
+        <label for="school">School / College Name:</label>
+        <input type="text" id="school" name="school_college"
+               minlength="3" maxlength="100"
+               placeholder="Enter school or college name"
+               required>
+        <br><br>
+<hr>
+        <h2>Permanent Address</h2>
+
+        <label for="address">Permanent Address:</label><br>
+        <textarea id="address" name="permanent_address"
+                  rows="6" cols="50"
+                  minlength="10" maxlength="300"
+                  placeholder="Enter your complete permanent address"
+                  required></textarea>
+
+        <br><br>
+
+        <label for="document">Upload Admission Document:</label>
+        <input type="file" id="document"
+               name="admission_document"
+               accept=".pdf,.jpg,.jpeg,.png"
+               required>
+
+        <br><br>
+
+        <input type="checkbox" id="declaration"
+               name="declaration"
+               value="accepted"
+               required>
+
+        <label for="declaration">
+            I declare that all the information provided by me is correct and
+            complete to the best of my knowledge.
+        </label>
+
+        <br><br>
+
+        <input type="submit" value="Submit Application">
+        <input type="reset" value="Reset Form">
+
+    </form>
+<hr>
+</body>
+</html>
+

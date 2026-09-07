@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Appointment Booking</title>
+</head>
+<body>
+
+    <h1>LifeSpring Clinic Appointment Booking</h1>
+<hr>
+    <h2>                                                                           
+        <b>Please fill out the form below to request an appointment with one of
+        our doctors. Provide accurate contact and visit information.</b>
+    </h2>
+
+    <h2>Clinic Timings</h2>
+
+    <table border="3">
+        <tr>
+            <th>Day</th>
+            <th>Opening Time</th>
+            <th>Closing Time</th>
+        </tr>
+        <tr>
+            <td>Monday - Friday</td>
+            <td>9:00 AM</td>
+            <td>8:00 PM</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>9:00 AM</td>
+            <td>5:00 PM</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>10:00 AM</td>
+            <td>2:00 PM</td>
+        </tr>
+    </table>
+
+    <p>
+        For emergencies, contact our
+        <a href="">Emergency Helpline</a>.
+    </p>
+
+    <form action="#" method="post">
+
+        <h2>Patient Information</h2>
+
+        <label for="patient_name">Patient Name:</label>
+        <input type="text" id="patient_name" name="patient_name"
+               minlength="3" maxlength="50"
+               placeholder="Enter patient name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+               placeholder="example@email.com"
+               autocomplete="email" required>
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile_number"
+               pattern="[0-9]{10}" maxlength="10"
+               placeholder="10 digit mobile number"
+               required>
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="date_of_birth"
+               min="1900-01-01" max="2026-12-31" required>
+        <br><br>
+
+        <label for="patient_id">Patient ID:</label>
+        <input type="text" id="patient_id" name="patient_id"
+               minlength="4" maxlength="20"
+               placeholder="Optional patient ID">
+        <br><br>
+
+        <h2>Appointment Details</h2>
+
+        <label for="appointment_date">Appointment Date:</label>
+        <input type="date" id="appointment_date"
+               name="appointment_date"
+               min="2026-09-05" required>
+        <br><br>
+
+        <label for="appointment_time">Appointment Time:</label>
+        <input type="time" id="appointment_time"
+               name="appointment_time"
+               min="09:00" max="20:00" required>
+        <br><br>
+
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" name="doctor" required>
+            <option value="">Select Doctor</option>
+            <option value="rajiv_sharma">Dr. Rajiv Sharma - Cardiologist</option>
+            <option value="neha_verma">Dr. Neha Verma - Dermatologist</option>
+            <option value="amit_kapoor">Dr. Amit Kapoor - General Physician</option>
+            <option value="priya_mehta">Dr. Priya Mehta - Pediatrician</option>
+            <option value="rohan_gupta">Dr. Rohan Gupta - Orthopedic Specialist</option>
+        </select>
+        <br><br>
+
+        <p>Visit Type:</p>
+
+        <input type="radio" id="new" name="visit_type" value="new_patient" required>
+        <label for="new">New Patient</label>
+
+        <input type="radio" id="followup" name="visit_type" value="follow_up">
+        <label for="followup">Follow-up</label>
+
+        <input type="radio" id="consultation" name="visit_type" value="consultation">
+        <label for="consultation">Consultation</label>
+
+        <input type="radio" id="emergency" name="visit_type" value="emergency">
+        <label for="emergency">Emergency</label>
+
+        <br><br>
+
+        <p>Preferred Communication Method:</p>
+
+        <input type="radio" id="phone" name="communication"
+               value="phone" required>
+        <label for="phone">Phone</label>
+
+        <input type="radio" id="email_contact" name="communication"
+               value="email">
+        <label for="email_contact">Email</label>
+
+        <input type="radio" id="sms" name="communication"
+               value="sms">
+        <label for="sms">SMS</label>
+
+        <br><br>
+
+        <label for="reason">Reason for Visit / Additional Information:</label><br>
+        <textarea id="reason" name="reason"
+                  rows="6" cols="50"
+                  minlength="10" maxlength="500"
+                  placeholder="Describe your reason for visiting"
+                  required></textarea>
+
+        <br><br>
+
+        <input type="checkbox" id="terms" name="appointment_terms"
+               value="accepted" required>
+        <label for="terms">
+            I accept the appointment terms and confirm that the information is correct.
+        </label>
+
+        <br><br>
+
+        <input type="submit" value="Book Appointment">
+        <input type="reset" value="Reset Form">
+
+    </form>
+<hr>
+</body>
+</html>

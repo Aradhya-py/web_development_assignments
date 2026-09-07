@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Leave Request</title>
+</head>
+<body>
+
+<h1>Employee Leave Request Form</h1>
+<hr>
+<p>Employees can use this form to submit their leave requests with the required employee and leave details.</p>
+
+<form action="#" method="post">
+
+    <h2>Employee Details</h2>
+
+    <label for="employee-name">Employee Name:</label>
+    <input type="text" id="employee-name" name="employee_name" placeholder="Enter full name" minlength="3" maxlength="50" required>
+    <br><br>
+
+    <label for="employee-id">Employee ID:</label>
+    <input type="text" id="employee-id" name="employee_id" placeholder="EMP12345" pattern="EMP[0-9]{5}" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="employee@company.com" autocomplete="email" required>
+    <br><br>
+
+    <label for="department">Department:</label>
+    <select id="department" name="department" required>
+        <option value="">Select Department</option>
+        <option value="cse">Computer Science</option>
+        <option value="hr">Human Resources</option>
+        <option value="finance">Finance</option>
+        <option value="marketing">Marketing</option>
+        <option value="sales">Sales</option>
+        <option value="operations">Operations</option>
+    </select>
+    <br><br>
+
+    <h2>Leave Details</h2>
+
+    <p>Leave Type:</p>
+
+    <input type="radio" id="casual" name="leave_type" value="casual" required>
+    <label for="casual">Casual Leave</label>
+    <br>
+
+    <input type="radio" id="sick" name="leave_type" value="sick">
+    <label for="sick">Sick Leave</label>
+    <br>
+
+    <input type="radio" id="earned" name="leave_type" value="earned">
+    <label for="earned">Earned Leave</label>
+    <br>
+
+    <input type="radio" id="work-from-home" name="leave_type" value="work_from_home">
+    <label for="work-from-home">Work From Home</label>
+    <br>
+
+    <input type="radio" id="other" name="leave_type" value="other">
+    <label for="other">Other</label>
+    <br><br>
+
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" name="start_date" required>
+    <br><br>
+
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" name="end_date" required>
+    <br><br>
+
+    <label for="leave-days">Number of Leave Days:</label>
+    <input type="number" id="leave-days" name="leave_days" min="1" max="365" step="1" required>
+    <br><br>
+
+    <p>Will you be reachable during leave?</p>
+
+    <input type="radio" id="reachable-yes" name="reachable" value="yes" required>
+    <label for="reachable-yes">Yes</label>
+
+    <input type="radio" id="reachable-no" name="reachable" value="no">
+    <label for="reachable-no">No</label>
+    <br><br>
+
+    <label for="reason">Leave Reason:</label>
+    <br>
+    <textarea id="reason" name="leave_reason" rows="6" cols="50" minlength="10" maxlength="500" placeholder="Enter the reason for your leave" required></textarea>
+    <br><br>
+
+    <label for="alternate-contact">Alternate Contact Number:</label>
+    <input type="tel" id="alternate-contact" name="alternate_contact" placeholder="10-digit mobile number" pattern="[0-9]{10}">
+    <br><br>
+
+    <label for="document">Supporting Document:</label>
+    <input type="file" id="document" name="supporting_document">
+    <br><br>
+
+    <input type="checkbox" id="declaration" name="declaration" value="confirmed" required>
+    <label for="declaration">I confirm that the information provided is correct and the leave request is genuine.</label>
+    <br><br>
+
+    <input type="submit" value="Submit Leave Request">
+    <input type="reset" value="Reset">
+
+</form>
+
+<h2>Leave Categories</h2>
+
+<table border="1">
+    <tr>
+        <th>Leave Category</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Casual Leave</td>
+        <td>Used for short personal requirements.</td>
+    </tr>
+    <tr>
+        <td>Sick Leave</td>
+        <td>Used when an employee is unwell.</td>
+    </tr>
+    <tr>
+        <td>Earned Leave</td>
+        <td>Planned leave accumulated by the employee.</td>
+    </tr>
+    <tr>
+        <td>Work From Home</td>
+        <td>Allows the employee to work remotely.</td>
+    </tr>
+</table>
+
+</body>
+</html>
+

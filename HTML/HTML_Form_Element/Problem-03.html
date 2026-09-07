@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Course Enrollment</title>
+</head>
+<body>
+
+<h1>Online Course Enrollment & Student Registration</h1>
+
+<p>Register for a technical course by providing your personal details, course preferences and educational background.</p>
+
+<img src="course.jpg" alt="Online Technical Course" width="400">
+
+<p><a href="https://blog.ipleaders.in/usefulness-online-courses/">View Course Information</a></p>
+
+<form action="#" method="post">
+
+    <h2>Account Information</h2>
+
+    <label for="name">Student Name:</label>
+    <input type="text" id="name" name="student_name" placeholder="Enter your full name" minlength="3" maxlength="50" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email" required>
+    <br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" minlength="8" maxlength="30" required>
+    <br><br>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+    <br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="date_of_birth" required>
+    <br><br>
+
+    <h2>Course Details</h2>
+
+    <label for="course">Select Course:</label>
+    <select id="course" name="course" required>
+        <option value="">Select a course</option>
+        <option value="python">Python Programming</option>
+        <option value="java">Java Programming</option>
+        <option value="web-development">Web Development</option>
+        <option value="data-structures">Data Structures</option>
+        <option value="database">Database Management</option>
+        <option value="machine-learning">Machine Learning</option>
+    </select>
+    <br><br>
+
+    <label for="batch">Select Batch:</label>
+    <select id="batch" name="batch" required>
+        <option value="">Select a batch</option>
+        <option value="morning">Morning Batch</option>
+        <option value="afternoon">Afternoon Batch</option>
+        <option value="evening">Evening Batch</option>
+        <option value="weekend">Weekend Batch</option>
+    </select>
+    <br><br>
+
+    <p>Preferred Learning Mode:</p>
+
+    <input type="radio" id="online" name="learning_mode" value="online" required>
+    <label for="online">Online</label>
+
+    <input type="radio" id="offline" name="learning_mode" value="offline">
+    <label for="offline">Offline</label>
+
+    <input type="radio" id="hybrid" name="learning_mode" value="hybrid">
+    <label for="hybrid">Hybrid</label>
+
+    <h2>Areas of Interest</h2>
+
+    <input type="checkbox" id="python-interest" name="interests" value="python">
+    <label for="python-interest">Python</label>
+    <br>
+
+    <input type="checkbox" id="java-interest" name="interests" value="java">
+    <label for="java-interest">Java</label>
+    <br>
+
+    <input type="checkbox" id="web-interest" name="interests" value="web-development">
+    <label for="web-interest">Web Development</label>
+    <br>
+
+    <input type="checkbox" id="ds-interest" name="interests" value="data-structures">
+    <label for="ds-interest">Data Structures</label>
+    <br>
+
+    <input type="checkbox" id="db-interest" name="interests" value="database">
+    <label for="db-interest">Database</label>
+    <br><br>
+
+    <h2>Educational Background</h2>
+
+    <label for="education">Education Level:</label>
+    <select id="education" name="education_level" required>
+        <option value="">Select education level</option>
+        <option value="school">School</option>
+        <option value="diploma">Diploma</option>
+        <option value="undergraduate">Undergraduate</option>
+        <option value="postgraduate">Postgraduate</option>
+    </select>
+    <br><br>
+
+    <label for="college">College/Institution:</label>
+    <input type="text" id="college" name="college" placeholder="Enter institution name" minlength="2" maxlength="100" required>
+    <br><br>
+
+    <label for="semester">Current Semester/Year:</label>
+    <input type="number" id="semester" name="semester" min="1" max="8" step="1" required>
+    <br><br>
+
+    <label for="experience">Programming Experience (Years):</label>
+    <input type="number" id="experience" name="programming_experience" min="0" max="20" step="0.5" value="0">
+    <br><br>
+
+    <label for="portfolio">GitHub/Portfolio URL:</label>
+    <input type="url" id="portfolio" name="portfolio" placeholder="https://github.com/username">
+    <br><br>
+
+    <label for="goals">Learning Goals:</label>
+    <br>
+    <textarea id="goals" name="learning_goals" rows="6" cols="50" minlength="10" maxlength="500" placeholder="Describe what you want to learn from this course"></textarea>
+    <br><br>
+
+    <input type="checkbox" id="confirmation" name="confirmation" value="confirmed" required>
+    <label for="confirmation">I confirm that the information provided is correct.</label>
+    <br><br>
+
+    <input type="submit" value="Enroll Now">
+    <input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
+
